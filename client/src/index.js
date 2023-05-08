@@ -4,6 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 // Context
 import UserContextProvider from './context/UserContext';
+import ToggleContextProvider from './context/ToggleContext';
 // Styles
 import './styles/index.css';
 
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContextProvider>
-        <App />
+        <ToggleContextProvider>
+          <App />
+        </ToggleContextProvider>
       </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>
