@@ -48,26 +48,29 @@ Backend: Express, Prisma, JavaScript, python, postgreSQL
 
 ## General action
 
-// General actions
-const actionDisconnect string = "disconnect"
-const actionError string = "error"
-const actionOnJoin string = "on-join"
-const actionOnTakeSeat string = "on-take-seat"
-const actionJoin string = "join"
-const actionMuteVideo string = "mute-video"
-const actionNewMessage string = "new-message"
-const actionSendMessage string = "send-message"
-const actionTakeSeat string = "take-seat"
+General actions
 
-// WebRTC Signaling actions
-const actionOnReceiveSignal string = "on-receive-signal"
-const actionSendSignal string = "send-signal"
+- const actionDisconnect string = "disconnect"
+- const actionError string = "error"
+- const actionOnJoin string = "on-join"
+- const actionOnTakeSeat string = "on-take-seat"
+- const actionJoin string = "join"
+- const actionMuteVideo string = "mute-video"
+- const actionNewMessage string = "new-message"
+- const actionSendMessage string = "send-message"
+- const actionTakeSeat string = "take-seat"
 
-// Game actions
-const actionBet string = "bet"
-const actionCall string = "call"
-const actionCheck string = "check"
-const actionFold string = "fold"
-const actionOnHoleCards string = "on-hole-cards"
-const actionRaise string = "raise"
-const actionUpdateGame string = "update-game"
+WebRTC Signaling actions
+
+- const actionOnReceiveSignal string = "on-receive-signal"
+- const actionSendSignal string = "send-signal"
+
+Game actions
+
+- const actionBet string = "bet"
+- const actionCall string = "call"
+- const actionCheck string = "check"
+- const actionFold string = "fold"
+- const actionOnHoleCards string = "on-hole-cards"
+- const actionRaise string = "raise"
+- const actionUpdateGame string = "update-game"
