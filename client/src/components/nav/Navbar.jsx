@@ -13,14 +13,6 @@ function Navbar() {
 
   let navigate = useNavigate();
 
-  const navigateToPage = (event) => {
-    const { id } = event.target;
-    console.log('ssddd', id);
-    setActiveNav(id);
-    toggleNavbar();
-    navigate(`${id}`);
-  };
-
   const logoutUser = (event) => {
     event.preventDefault();
     setActiveNav('/');
