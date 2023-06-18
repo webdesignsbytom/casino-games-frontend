@@ -72,6 +72,11 @@ function Navbar() {
                 Home
               </Link>
             </li>
+            <li className={activeNav === '/games' ? '' : ''}>
+              <Link className='w-full' to='/games'>
+                Games
+              </Link>
+            </li>
             <li className={activeNav === '/games/texas-holdem' ? '' : ''}>
               <Link className='w-full' to='/games/texas-holdem'>
                 Texas Holdem
@@ -126,6 +131,17 @@ function Navbar() {
               >
                 <Link className='w-full' to='/'>
                   Home
+                </Link>
+              </li>
+              <li
+                className={
+                  activeNav === '/games'
+                    ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                    : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                }
+              >
+                <Link className='w-full' to='/games'>
+                  Games
                 </Link>
               </li>
               <li

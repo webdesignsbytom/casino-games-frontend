@@ -7,10 +7,12 @@ import PokerImage from '../../assets/images/pokerMd.png';
 // Context
 import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
+import QuickDepositComponent from '../../components/banking/QuickDepositComponent';
 
 function TexasHoldemPokerPage() {
   const { user } = useContext(UserContext);
-  const { toggleNavbarOpenClosed, setActiveNav } = useContext(ToggleContext);
+  const { toggleNavbarOpenClosed, setActiveNav, toggleQuickDepositOpenClosed, toggleQuickDeposit } = useContext(ToggleContext);
+
   let navigate = useNavigate();
 
   const navigateToPage = (event) => {
@@ -24,7 +26,8 @@ function TexasHoldemPokerPage() {
     <div className='grid font-poppins lg:h-screen grid-rows-reg overflow-hidden lg:max-h-screen bg-gray-50'>
       <Navbar />
       {/* Main */}
-      <main className='container mx-auto grid h-full lg:gap-20 lg:grid-cols-2 p-1'>
+      <main className='container relative mx-auto grid h-full lg:gap-20 lg:grid-cols-2 p-1'>
+        {toggleQuickDeposit && <QuickDepositComponent />}
         {/* Left Side */}
         <section className='grid'>
           <section className='my-4'>
@@ -51,38 +54,53 @@ function TexasHoldemPokerPage() {
           </div>
           <div className='grid items-center px-4 mb-4'>
             <button
+              id='/games/texas-holdem/live-game'
               onClick={navigateToPage}
               className='outline outline-2 outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'
             >
-              <span className='font-semibold'>Play Now!</span>
+              <span className='font-semibold'>Play Live Now!</span>
             </button>
           </div>
         </section>
         {/* Right side */}
         <section className='grid px-2 mb-2'>
-          <div className='outline outline-2 outline-black p-2 rounded text-center'>
+          <div className='outline outline-2 outline-black p-2 rounded text-center my-8'>
             <article>
               <div>
                 <h2>Texas Hold'em Poker</h2>
               </div>
               <section className='my-2'>
-                <div>
-                  <h3>How to play?</h3>
-                </div>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odio, vel? Quisquam, doloribus minus nulla dolor nisi esse
-                    ipsum eaque totam ratione cupiditate laborum, odit qui
-                    deleniti voluptate labore incidunt nam, commodi odio tempore
-                    natus. Et molestias eligendi magni, laboriosam voluptatem
-                    nobis modi eveniet nam corporis ducimus consequuntur
-                    assumenda vel. Iusto?
-                    <span className='pl-1 text-hyperlink-blue'>
-                      <Link to='/games/texas-holdem/how-to-play'>Learn More...</Link>
-                    </span>
-                  </p>
-                </div>
+                <section>
+                  <div>
+                    <h3>How to play?</h3>
+                  </div>
+                  <div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odio, vel? Quisquam, doloribus minus nulla dolor nisi esse
+                      ipsum eaque totam ratione cupiditate laborum, odit qui
+                      deleniti voluptate labore incidunt nam, commodi odio
+                      tempore natus. Et molestias eligendi magni, laboriosam
+                      voluptatem nobis modi eveniet nam corporis ducimus
+                      consequuntur assumenda vel. Iusto?
+                      <span className='pl-1 text-hyperlink-blue'>
+                        <Link to='/games/texas-holdem/how-to-play'>
+                          Learn More...
+                        </Link>
+                      </span>
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <div>
+                    <h4>Add Funds</h4>
+                  </div>
+                  <div>
+                    <button onClick={toggleQuickDepositOpenClosed} className='outline outline-2 outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'>
+                      Quick Deposit
+                    </button>
+                  </div>
+                </section>
               </section>
             </article>
           </div>
