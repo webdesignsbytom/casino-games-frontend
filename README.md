@@ -20,6 +20,9 @@ Current Address [Live Casino Games Link](https://rococo-kleicha-53fa88.netlify.a
   - [General info](#general-info)
   - [Technologies](#technologies)
   - [Run this project locally](#run-this-project-locally)
+  - [Game options and features](#game-options-and-features)
+  - [In game user details](#in-game-user-details)
+  - [Game options](#game-options)
   - [General action](#general-action)
 
 ## General info
@@ -45,6 +48,36 @@ Backend: Express, Prisma, JavaScript, python, postgreSQL
 2. Navigate to client and server files and run
 3. `npm install`
 4. `npm start`
+
+
+## Game options and features
+
+1. Quick deposit - in game and before
+2. Chat window
+3. Open/empty seats
+4. Currency options
+5. Chip size selection
+6. Custom amount input
+
+## In game user details
+
+1. Profile image
+2. Username
+3. Total chips
+4. current hand
+5. current bet
+6. Starting player
+
+## Game options
+
+1. Fold
+2. Check
+3. Check All
+4. Call
+5. Call All
+6. Raise
+7. Anti
+8. 
 
 ## General action
 

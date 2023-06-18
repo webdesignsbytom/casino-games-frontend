@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
 // Images
-import PokerImage from '../../assets/images/pokerMd.png';
+import PokerImage from '../../assets/images/display/pokerMd.png';
 // Context
 import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
@@ -11,7 +11,12 @@ import QuickDepositComponent from '../../components/banking/QuickDepositComponen
 
 function TexasHoldemPokerPage() {
   const { user } = useContext(UserContext);
-  const { toggleNavbarOpenClosed, setActiveNav, toggleQuickDepositOpenClosed, toggleQuickDeposit } = useContext(ToggleContext);
+  const {
+    toggleNavbarOpenClosed,
+    setActiveNav,
+    toggleQuickDepositOpenClosed,
+    toggleQuickDeposit,
+  } = useContext(ToggleContext);
 
   let navigate = useNavigate();
 
@@ -56,9 +61,9 @@ function TexasHoldemPokerPage() {
             <button
               id='/games/texas-holdem/live-game'
               onClick={navigateToPage}
-              className='outline outline-2 outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'
+              className='outline outline-2 font-semibold outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'
             >
-              <span className='font-semibold'>Play Live Now!</span>
+              Play Live Now!
             </button>
           </div>
         </section>
@@ -67,10 +72,10 @@ function TexasHoldemPokerPage() {
           <div className='outline outline-2 outline-black p-2 rounded text-center my-8'>
             <article>
               <div>
-                <h2>Texas Hold'em Poker</h2>
+                <h2 className='text-xl'>Texas Hold'em Poker</h2>
               </div>
               <section className='my-2'>
-                <section>
+                <section className='my-4'>
                   <div>
                     <h3>How to play?</h3>
                   </div>
@@ -93,10 +98,13 @@ function TexasHoldemPokerPage() {
                 </section>
                 <section>
                   <div>
-                    <h4>Add Funds</h4>
+                    <h4 className='text-xl mb-2'>Add Funds</h4>
                   </div>
                   <div>
-                    <button onClick={toggleQuickDepositOpenClosed} className='outline outline-2 outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'>
+                    <button
+                      onClick={toggleQuickDepositOpenClosed}
+                      className='outline outline-2 outline-black p-2 rounded h-fit bg-yellow-400 hover:bg-yellow-500'
+                    >
                       Quick Deposit
                     </button>
                   </div>

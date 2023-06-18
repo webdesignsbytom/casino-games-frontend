@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
-import LogoImage from '../../assets/images/wdbt-black.svg';
+import LogoImage from '../../assets/images/logos/wdbt-black.svg';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
