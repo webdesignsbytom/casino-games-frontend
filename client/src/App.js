@@ -8,8 +8,8 @@ function App() {
   return (
     <Routes>
       <Route path='/' index element={<WelcomePage />} />
-      <Route path='/texas-holdem' index element={<TexasHoldemPokerPage />} />
-      <Route path='/blackjack' index element={<BlackjackPage />} />
+      <Route path='/games/texas-holdem' index element={<TexasHoldemPokerPage />} />
+      <Route path='/games/blackjack' index element={<BlackjackPage />} />
       <Route path='/test' index element={<TestPage />} />
     </Routes>
   );
