@@ -5,16 +5,19 @@ export const ToggleContext = React.createContext();
 
 const ToggleContextProvider = ({ children }) => {
   const [toggleNavigation, setToggleNavigation] = useState(false);
+  const [activeNav, setActiveNav] = useState('/');
 
-  const toggleNavbar = () => {
-    setToggleNavigation(!toggleNavigation)
-  }
- 
+  const toggleNavbarOpenClosed = () => {
+    setToggleNavigation(!toggleNavigation);
+  };
+
   return (
     <ToggleContext.Provider
       value={{
         toggleNavigation,
-        toggleNavbar
+        toggleNavbarOpenClosed,
+        activeNav,
+        setActiveNav,
       }}
     >
       {children}

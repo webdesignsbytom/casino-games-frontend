@@ -4,15 +4,13 @@ import { useEffect, useState } from 'react';
 import LoggedInUser from '../utils/LoggedInUser';
 // Fetch
 import client from '../utils/axios/client';
+// Data
+import { tempUserData } from '../utils/TempData';
 // Context
 export const UserContext = React.createContext();
 
 const UserContextProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    email: '',
-    username: '',
-    isVerified: false,
-  });
+  const [user, setUser] = useState(tempUserData);
   const [token, setToken] = useState(
     localStorage.getItem(process.env.REACT_APP_USER_TOKEN) || ''
   );

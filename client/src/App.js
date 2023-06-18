@@ -8,9 +8,11 @@ function App() {
   return (
     <Routes>
       <Route path='/' index element={<WelcomePage />} />
-      <Route path='/games/texas-holdem' index element={<TexasHoldemPokerPage />} />
-      <Route path='/games/blackjack' index element={<BlackjackPage />} />
-      <Route path='/test' index element={<TestPage />} />
+      <Route path='/games/texas-holdem' element={<TexasHoldemPokerPage />} />
+      <Route path='/games/texas-holdem/how-to-play' element={<TestPage />} />
+      <Route path='/games/blackjack' element={<BlackjackPage />} />
+      <Route path='/games/blackjack/how-to-play' element={<TestPage />} />
+      <Route path='/test' element={<TestPage />} />
     </Routes>
   );
 }

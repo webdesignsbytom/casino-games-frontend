@@ -8,7 +8,7 @@ import LogoImage from '../../assets/images/wdbt-black.svg';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
-  const { toggleNavbar, toggleNavigation, activeNav, setActiveNav } =
+  const { toggleNavbarOpenClosed, toggleNavigation, activeNav, setActiveNav } =
     useContext(ToggleContext);
 
   let navigate = useNavigate();
@@ -16,7 +16,7 @@ function Navbar() {
   const logoutUser = (event) => {
     event.preventDefault();
     setActiveNav('/');
-    toggleNavbar();
+    toggleNavbarOpenClosed();
     setUser({});
     localStorage.removeItem(process.env.REACT_APP_USER_TOKEN);
 
@@ -40,7 +40,7 @@ function Navbar() {
       {/* Phone Nav */}
       <nav
         onClick={() => {
-          toggleNavbar();
+          toggleNavbarOpenClosed();
         }}
         className='grid items-center justify-center lg:hidden no__highlights pr-4'
       >

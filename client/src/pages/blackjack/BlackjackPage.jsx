@@ -9,8 +9,7 @@ function BlackjackPage() {
     <Navbar />
     {/* Main */}
     <main className='grid h-full p-1'>
-      <Link to='/texas-holdem'>Texas Holdem</Link>
-      <Link to='/blackjack'>Blackjack</Link>
+
     </main>
   </div>
   )
