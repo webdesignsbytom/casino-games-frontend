@@ -6,11 +6,12 @@ import { UserContext } from '../../context/UserContext';
 import EmptyCardComponent from '../../components/cards/EmptyCardComponent';
 import TexasHoldemPlayerComponent from '../../components/player/TexasHoldemPlayerComponent';
 import { npcUserData } from '../../utils/TempData';
+import TexasHoldemPlayerComponentSide from '../../components/player/TexasHoldemPlayerComponentSide';
 
 function TexasHoldemGamePage() {
   const { user } = useContext(UserContext);
 
-  const [playersArray, setPlayersArray] = useState(npcUserData)
+  const [playersArray, setPlayersArray] = useState(npcUserData);
 
   return (
     <div className='h-screen casino__background'>
@@ -28,22 +29,23 @@ function TexasHoldemGamePage() {
       </section>
 
       {/* Main game */}
-      <section className='grid h-full '>
+      <section className='grid h-full'>
+        {/* Overlay users */}
         <div className='mt-16 grid grid-rows-a1a'>
-          <section className='grid grid-cols-2'>
-            <div>
+          <section className='grid grid-cols-2 gap-4 -mb-8'>
+            <div className='grid justify-end mr-24'>
               <TexasHoldemPlayerComponent playerData={playersArray[0]} />
             </div>
-            <div>
+            <div className='ml-40'>
               <TexasHoldemPlayerComponent playerData={playersArray[1]} />
             </div>
           </section>
 
           {/* TABLE AND SIDE MEMBERS */}
           <section className='grid grid-cols-a1a w-full px-10 h-full py-4'>
-            <section>
+            <section className=' grid items-center'>
               <div className='w-fit h-fit'>
-                <TexasHoldemPlayerComponent playerData={playersArray[5]} />
+                <TexasHoldemPlayerComponentSide playerData={playersArray[5]} />
               </div>
             </section>
             {/* TABLE */}
@@ -63,7 +65,7 @@ function TexasHoldemGamePage() {
                   </div>
                   {/* side and table*/}
                   <div className='grid grid-cols-a1a p-2 h-fit'>
-                    <section className='grid justify-center items-center h-fit'>
+                    <section className='grid justify-center items-center'>
                       <div className='flex gap-2 justify-center rotate-90 h-fit'>
                         <EmptyCardComponent />
                         <EmptyCardComponent />
@@ -113,18 +115,18 @@ function TexasHoldemGamePage() {
                 </div>
               </section>
             </div>
-            <section>
-              <div>
-                <TexasHoldemPlayerComponent playerData={playersArray[2]} />
+            <section className=' grid items-center'>
+              <div className='w-fit h-fit'>
+                <TexasHoldemPlayerComponentSide playerData={playersArray[5]} />
               </div>
             </section>
           </section>
           {/* BOTTOM ROW OF PLAYER */}
-          <section className='grid grid-cols-2'>
-            <div>
+          <section className='grid grid-cols-2 mb-10'>
+            <div className='grid justify-end mr-24'>
               <TexasHoldemPlayerComponent playerData={playersArray[3]} />
             </div>
-            <div>
+            <div className='ml-40'>
               <TexasHoldemPlayerComponent playerData={playersArray[4]} />
             </div>
           </section>
