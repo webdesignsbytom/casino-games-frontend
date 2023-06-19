@@ -24,7 +24,7 @@ export const npcUserData = [
       currencySymbol: '£',
     },
     profile: {
-      profileimageUrl: '../images/default.png',
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
   },
   {
@@ -38,7 +38,7 @@ export const npcUserData = [
       currencySymbol: '£',
     },
     profile: {
-      profileimageUrl: '../images/default.png',
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
   },
   {
@@ -52,7 +52,7 @@ export const npcUserData = [
       currencySymbol: '£',
     },
     profile: {
-      profileimageUrl: '../images/default.png',
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
   },
   {
@@ -66,7 +66,7 @@ export const npcUserData = [
       currencySymbol: '£',
     },
     profile: {
-      profileimageUrl: '../images/default.png',
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
   },
   {
@@ -80,7 +80,21 @@ export const npcUserData = [
       currencySymbol: '£',
     },
     profile: {
-      profileimageUrl: '../images/default.png',
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
+    },
+  },
+  {
+    id: 6,
+    username: 'Castle',
+    bank: {
+      funds: 10000,
+    },
+    currency: {
+      currencyType: 'GBP',
+      currencySymbol: '£',
+    },
+    profile: {
+      profileimageUrl: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
   },
 ];
